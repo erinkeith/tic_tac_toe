@@ -26,3 +26,27 @@ class TestMarkSquare(unittest.TestCase):
         player = 'X'
 
         self.assertFalse(board.mark_square(row, column, player))
+
+
+class TestChangePlayer(unittest.TestCase):
+
+    def test_no_player_init(self):
+        board = tictactoe.Board()
+        board.change_player()
+
+        self.assertEqual(board.__current_player, 'O')
+
+    def test_change_O_to_X(self):
+        board = tictactoe.Board()
+        board.change_player()
+        board.change_player()
+
+        self.assertEqual(board.__current_player, 'X')
+
+    def test_change_X_to_O(self):
+        board = tictactoe.Board()
+        board.change_player()
+        board.change_player()
+        board.change_player()
+
+        self.assertEqual(board.__current_player, 'O')
