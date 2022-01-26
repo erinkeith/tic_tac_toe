@@ -9,7 +9,7 @@ class TestMarkSquare(unittest.TestCase):
         column = row = 0
         player = 'X'
 
-        self.assertTrue(board.mark_square(column, row, player))
+        self.assertTrue(board.mark_square(row, column, player))
 
     def test_full_square(self):
         board = tictactoe.Board()
@@ -18,11 +18,11 @@ class TestMarkSquare(unittest.TestCase):
 
         board.mark_square(column, row, player)
 
-        self.assertFalse(board.mark_square(column, row, player))
+        self.assertFalse(board.mark_square(row, column, player))
 
     def test_out_of_bounds_square(self):
         board = tictactoe.Board()
         column = row = 4
         player = 'X'
 
-        self.assertFalse(board.mark_square(column, row, player))
+        self.assertFalse(board.mark_square(row, column, player))
