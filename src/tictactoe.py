@@ -15,6 +15,13 @@ class Board(object):
         return self.__board
         
     def change_player(self):
+        """
+        updates current_player attribute
+
+        :param: none
+
+        :return: none
+        """
         if self.__current_player = ' ':
             self.__current_player = 'O'
         elif self.__current_player = 'O':
