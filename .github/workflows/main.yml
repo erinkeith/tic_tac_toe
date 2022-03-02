@@ -15,11 +15,12 @@ jobs:
       with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
+        args: >
+        -Dsonar.organization: Erin Keith
+        -Dsonar.projectKey: erinkeith
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: 1583cb03161caebbcc3a9636569ee2d4caa39647
-      args: >
-      -Dsonar.organization: Erin Keith
-      -Dsonar.projectKey: erinkeith
+      
