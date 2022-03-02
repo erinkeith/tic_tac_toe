@@ -19,4 +19,7 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: 1583cb03161caebbcc3a9636569ee2d4caa39647
+      args: >
+      -Dsonar.organization: Erin Keith
+      -Dsonar.projectKey: erinkeith
